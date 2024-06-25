@@ -8,6 +8,8 @@ import { enviroment } from './enviroments/enviroment';
 import {AngularFireModule} from '@angular/fire/compat'; //trabaja con las colecciones de la informacion
 import {AngularFireAuthModule} from '@angular/fire/compat/auth'; //trabaja con la autentificacion
 import {AngularFireStorageModule} from '@angular/fire/compat/storage' //trabaja con imagenes y archivos
+//importancion de componentes globales
+import { SharedModule } from './modules/shared/components/shared.module';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,8 @@ import {AngularFireStorageModule} from '@angular/fire/compat/storage' //trabaja 
     //vinculacion del proyecto con firebase
     AngularFireModule.initializeApp(enviroment.firebaseConfig),
     AngularFireAuthModule,
-    AngularFireStorageModule
+    AngularFireStorageModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
