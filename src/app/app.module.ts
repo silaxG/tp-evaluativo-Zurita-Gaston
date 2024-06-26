@@ -10,6 +10,7 @@ import {AngularFireAuthModule} from '@angular/fire/compat/auth'; //trabaja con l
 import {AngularFireStorageModule} from '@angular/fire/compat/storage' //trabaja con imagenes y archivos
 //importancion de componentes globales
 import { SharedModule } from './modules/shared/components/shared.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { SharedModule } from './modules/shared/components/shared.module';
     AngularFireModule.initializeApp(enviroment.firebaseConfig),
     AngularFireAuthModule,
     AngularFireStorageModule,
-    SharedModule
+    SharedModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
