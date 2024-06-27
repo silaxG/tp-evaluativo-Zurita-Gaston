@@ -9,9 +9,9 @@ import { Tile } from 'src/models/grid';
 })
 export class GridsComponent {
   tiles = [
-    { text: 'One', cols: 3, rows: 1, color: 'lightblue', imageUrl: '' },
-    { text: 'Two', cols: 1, rows: 2, color: 'lightgreen', imageUrl: '' },
-    { text: 'Three', cols: 1, rows: 1, color: '', imageUrl: 'path/to/image3.jpg' },
-    { text: 'Four', cols: 2, rows: 1, color: '#DDBDF1', imageUrl: '' },
+    { text: 'One', cols: 2, rows: 2, color: 'lightblue', imageUrl: '' },
+    { text: 'Two', cols: 2, rows: 2, color: 'lightgreen', imageUrl: '' },
+    { text: 'Three', cols: 4, rows: 4, color: '', imageUrl: '/assets/wallhaven.jpg' },
+    { text: 'Four', cols: 4, rows: 4, color: '#DDBDF1', imageUrl: '' },
   ];
 }
