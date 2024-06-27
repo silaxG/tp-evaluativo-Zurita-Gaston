@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
+import { Usuario } from 'src/app/models/usuario';
 import { UserService } from 'src/app/modules/autentificacion/services/user.service';
+import { FirestoreService } from 'src/app/modules/shared/firestore.service';
+import { RouteReuseStrategy, Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -7,18 +10,32 @@ import { UserService } from 'src/app/modules/autentificacion/services/user.servi
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-  email=''
-  password=''
-  async iniciarSesion() {
-    try {
-      await this.authService.iniciarSesion(this.email, this.password);
-      console.log('Usuario ha iniciado sesión correctamente.');
-      // Aquí podrías redirigir al usuario a otra página o realizar otra acción
-    } catch (error) {
-      // Manejo de errores: podrías mostrar un mensaje al usuario o realizar otra acción
-      console.error('Error al iniciar sesión:', error);
+  usuarios: Usuario = {
+    uid: '',
+   email: '',
+   role:'',
+    password: '',
+  }
+
+  constructor(public servicioAuth: UserService,
+    public servicioFirestore: FirestoreService,
+    public servicioRutas: Router,
+  ) { }
+  //funcion que permite que permite verificar si las credenciales son correctas a la hora de iniciar sesion
+ async iniciarSesion() {
+    const credenciales={
+      email: this.usuarios.email,
+      passowrd: this.usuarios.password
     }
+    const res= await this.servicioAuth.iniciarSesion(credenciales.email, credenciales.passowrd)
+    .then(res=>{
+      alert("se pudo ingresar con exito")
+      this.servicioRutas.navigate(["/inicio"])
+    })
+    .catch(err=>{
+      alert("hubo un problema al iniciar sesion "+err)
+    })
+    //recibe la informacion ingresada desde el navegador
+
   }
 }
-
-
