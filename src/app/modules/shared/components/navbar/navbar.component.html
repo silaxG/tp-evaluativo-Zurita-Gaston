@@ -1,14 +1,17 @@
 <mat-toolbar>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-      <mat-icon>menu</mat-icon>
-    </button>
-    <span>My App</span>
-    <span class="example-spacer"></span>
-    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-      <mat-icon>favorite</mat-icon>
-    </button>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-      <mat-icon>share</mat-icon>
-    </button>
-  </mat-toolbar>
-  
+  <!-- Menú hamburguesa solo disponible en resoluciones de teléfono -->
+  <button id="menuhamburguesa1" mat-icon-button [matMenuTriggerFor]="menuhamburguesa"><mat-icon>menu</mat-icon></button>
+  <mat-menu #menuhamburguesa="matMenu">
+    <button mat-menu-item routerLink="/inicio">Inicio</button>
+    <button mat-menu-item routerLink="">Catálogo</button>
+    <button mat-menu-item routerLink="/login">Iniciar Sesión</button>
+    <button mat-menu-item routerLink="/registro">Registrarse</button>
+  </mat-menu>
+
+  <span>My App</span>
+  <button mat-button id="menuinicio" routerLink="/inicio">Inicio</button>
+  <button mat-button id="menuproductos" routerLink="">Productos</button>
+  <span class="example-spacer"></span>
+  <button mat-button id="botonregistrarse" routerLink="/Registro">Registrarse</button>
+  <button mat-flat-button id="botoniniciarsesion" routerLink="login">Iniciar Sesión</button>
+</mat-toolbar>

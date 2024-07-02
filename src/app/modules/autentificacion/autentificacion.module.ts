@@ -3,23 +3,25 @@ import { CommonModule } from '@angular/common';
 
 import { AutentificacionRoutingModule } from './autentificacion-routing.module';
 import { LoginComponent } from './pages/login/login.component';
-import { AngularFireAuth } from '@angular/fire/compat/auth';
-import { AngularFirestore} from '@angular/fire/compat/firestore';
+import {  AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { AngularFirestoreModule} from '@angular/fire/compat/firestore';
+import { RegistroComponent } from './pages/registro/registro.component';
 
 
 @NgModule({
   declarations: [
     LoginComponent,
+    RegistroComponent,
   ],
   imports: [
     CommonModule,
     AutentificacionRoutingModule,
-    AngularFireAuth,
-    AngularFirestore
+    AngularFireAuthModule,
+    AngularFirestoreModule
   ],
   exports:[
-    AngularFireAuth,
-    AngularFirestore
+    AngularFireAuthModule,
+    AngularFirestoreModule
   ]
 })
 export class AutentificacionModule { }

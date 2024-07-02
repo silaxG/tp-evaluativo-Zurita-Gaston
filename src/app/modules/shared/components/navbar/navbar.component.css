@@ -1,0 +1,22 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.menu-items {
+  display: flex;
+}
+
+@media only screen and (max-width: 600px) {
+  #menuinicio,
+  #menuproductos,
+  #botonregistrarse,
+  #botoniniciarsesion {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  #menuhamburguesa1 {
+    display: none;
+  }
+}
