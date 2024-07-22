@@ -4,7 +4,6 @@ import { InicioComponent } from './pages/inicio/inicio.component';
 
 const routes: Routes = [
   //importando una ruta hija
-  {path: "",component:InicioComponent},
   {path:"inicio",component:InicioComponent}
 ];
 
