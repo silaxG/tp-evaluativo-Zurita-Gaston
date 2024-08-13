@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { InicioComponent } from './pages/inicio/inicio.component';
 
 const routes: Routes = [
+  {path:"",component:InicioComponent},
   //importando una ruta hija
   {path:"inicio",component:InicioComponent}
 ];

@@ -1,27 +1,49 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+// ARCHIVO DE RUTAS HIJAS
 import { AutentificacionRoutingModule } from './autentificacion-routing.module';
-import { LoginComponent } from './pages/login/login.component';
-import {  AngularFireAuthModule } from '@angular/fire/compat/auth';
-import { AngularFirestoreModule} from '@angular/fire/compat/firestore';
-import { RegistroComponent } from './pages/registro/registro.component';
 
+// VISTAS DE AUTENTIFICACIÓN
+import { RegistroComponent } from './pages/registro/registro.component';
+import { IniciosesionComponent } from './pages/iniciosesion/iniciosesion.component';
+
+// COMPONENTES DE MATERIAL
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSelectModule } from '@angular/material/select';
+
+// COMPONENTE DE ANGULAR
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-    LoginComponent,
     RegistroComponent,
+    IniciosesionComponent
   ],
   imports: [
     CommonModule,
     AutentificacionRoutingModule,
-    AngularFireAuthModule,
-    AngularFirestoreModule
+    // MATERIAL
+    MatIconModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatButtonModule,
+    MatSelectModule,
+    // ANGULAR
+    FormsModule
   ],
-  exports:[
-    AngularFireAuthModule,
-    AngularFirestoreModule
+  exports: [
+    RegistroComponent,
+    IniciosesionComponent,
+    MatIconModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatButtonModule,
+    MatSelectModule,
+    FormsModule
   ]
 })
 export class AutentificacionModule { }
