@@ -9,9 +9,11 @@ import { Tile } from 'src/models/grid';
 })
 export class GridsComponent {
   tiles = [
-    { text: '', cols: 2, rows: 2, color: 'lightblue', imageUrl: '' },
-    { text: 'Two', cols: 2, rows: 2, color: 'lightgreen', imageUrl: '' },
-    { text: 'Three', cols: 4, rows: 4, color: '', imageUrl: '/assets/wallhaven.jpg' },
-    { text: 'Four', cols: 4, rows: 4, color: '#DDBDF1', imageUrl: '' },
+    //la primera foto tendra un parallax
+    { text: 'Texto Gigante', cols: 4, rows: 4, color: '', imageUrl: '', class: 'parallax' },
+    { text: 'Amigurumis recien fabricados para su venta', cols: 2, rows: 2, imageUrl: '', class: 'solido' },
+    { text: 'Two', cols: 2, rows: 2, imageUrl: '', class: '' },
+    { text: 'Four', cols: 4, rows: 4, imageUrl: '', class: '' },
   ];
+  
 }
