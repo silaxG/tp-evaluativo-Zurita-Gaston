@@ -4,7 +4,7 @@ import { CrudService } from '../../services/crud.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'app-table',
+  selector: 'app-tabla',
   templateUrl: './tabla.component.html',
   styleUrls: ['./tabla.component.css']
 })

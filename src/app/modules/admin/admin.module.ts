@@ -2,9 +2,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { AdminRoutingModule } from './admin-routing.module';
+
 import { AdminComponent } from './pages/admin/admin.component';
 import { TablaComponent } from './components/tabla/tabla.component';
-
 
 // Paqueterías para formularios y formularios reactivos
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -15,8 +15,8 @@ import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
-    AdminComponent,
-    TablaComponent
+AdminComponent,
+TablaComponent
   ],
   imports: [
     CommonModule,

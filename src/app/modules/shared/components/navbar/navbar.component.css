@@ -11,7 +11,8 @@
   #menuproductos,
   #botonregistrarse,
   #textomarca,
-  #botoniniciarsesion {
+  #botoniniciarsesion,
+  #botoncerrarsesion {
     display: none;
   }
 }

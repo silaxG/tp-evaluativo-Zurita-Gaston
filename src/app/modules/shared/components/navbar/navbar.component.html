@@ -4,14 +4,22 @@
   <mat-menu #menuhamburguesa="matMenu">
     <button mat-menu-item routerLink="/inicio">Inicio</button>
     <button mat-menu-item routerLink="/producto">Catálogo</button>
-    <button mat-menu-item routerLink="/login">Iniciar Sesión</button>
-    <button mat-menu-item routerLink="/registro">Registrarse</button>
+    <!-- Mostramos "Iniciar Sesión" o "Cerrar Sesión" basado en si el usuario está logueado -->
+    <button mat-menu-item *ngIf="logueado" routerLink="/login">Iniciar Sesión</button>
+    <button mat-menu-item *ngIf="logueado" routerLink="/registro">Registrarse</button>
+    <button mat-menu-item *ngIf="deslogueado" (click)="cerrarSesion()">Cerrar Sesión</button>
   </mat-menu>
 
   <span id="textomarca">Paraiso amigurumi</span>
   <button mat-button id="menuinicio" routerLink="/inicio">Inicio</button>
-  <button mat-button id="menuproductos" routerLink="/producto">catalogo</button>
+  <button mat-button id="menuproductos" routerLink="/producto">Catálogo</button>
+
   <span class="example-spacer"></span>
-  <button mat-button id="botonregistrarse" routerLink="/Registro">Registrarse</button>
-  <button mat-flat-button id="botoniniciarsesion" routerLink="login">Iniciar Sesión</button>
+
+  <!-- Botones de "Registrarse" y "Iniciar Sesión" visibles cuando no se ha iniciado sesión -->
+  <button mat-button id="botonregistrarse" routerLink="/registro" *ngIf="logueado">Registrarse</button>
+  <button mat-flat-button id="botoniniciarsesion" routerLink="/login" *ngIf="logueado">Iniciar Sesión</button>
+
+  <!-- Botón de "Cerrar Sesión" visible solo cuando el usuario está logueado -->
+  <button mat-flat-button id="botoncerrarsesion" *ngIf="deslogueado" (click)="cerrarSesion()">Cerrar Sesión</button>
 </mat-toolbar>

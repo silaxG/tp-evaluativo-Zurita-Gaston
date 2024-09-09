@@ -10,9 +10,9 @@ import { Tile } from 'src/models/grid';
 export class GridsComponent {
   tiles = [
     //la primera foto tendra un parallax
-    { text: 'Texto Gigante', cols: 4, rows: 4, color: '', imageUrl: '', class: 'parallax' },
+    { text: '', cols: 4, rows: 4, color: '', imageUrl: '', class: 'parallax' },
     { text: 'Amigurumis recien fabricados para su venta', cols: 2, rows: 2, imageUrl: '', class: 'solido' },
-    { text: 'Two', cols: 2, rows: 2, imageUrl: '', class: '' },
+    { text: '', cols: 2, rows: 2, imageUrl: '/assets/inicio1.jpeg', class: 'meow' },
     { text: 'Four', cols: 4, rows: 4, imageUrl: '', class: '' },
   ];
   
