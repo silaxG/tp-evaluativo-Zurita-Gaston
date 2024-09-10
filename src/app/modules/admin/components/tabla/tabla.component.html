@@ -86,8 +86,8 @@
 
                 <div class="mb-3">
                     <label class="form-label">Ingrese una imagen:</label>
-                    <input class="form-control" type="text" formControlName="imagen"
-                        placeholder="Ingrese vínculo de una imagen">
+                    <input class="form-control" type="file" formControlName="imagen"
+                    (change)="procesarImagen($event)" placeholder="Ingrese vínculo de una imagen">
                 </div>
 
                 <div class="mb-3">
@@ -148,7 +148,7 @@
 
                 <div class="mb-3">
                     <label class="form-label">Ingrese una imagen:</label>
-                    <input class="form-control" type="text" formControlName="imagen"
+                    <input class="form-control" type="file" (change)="procesarImagen($event)" formControlName="imagen"
                         placeholder="{{productoEdit.imagen}}">
                 </div>
 

@@ -126,4 +126,23 @@ export class TablaComponent {
       alert("Hubo un problema al modificar el producto: \n"+error);
     })
   }
+  //evento que convierte la imagen en codigo leible
+  procesarImagen(event: any) {
+    const archivo = event.target.files[0]; // Obtenemos el archivo seleccionado
+    if (archivo) {
+      const lector = new FileReader();
+  
+      // Este evento se activa cuando la lectura de la imagen ha terminado
+      lector.onload = (e: any) => {
+        const base64Imagen = e.target.result; // Convertimos la imagen a base64
+  
+        // Asignamos la imagen al control del formulario 'imagen'
+        this.producto.get('imagen')?.setValue(base64Imagen);
+      };
+  
+      lector.readAsDataURL(archivo); // Leemos la imagen como base64
+    }
+  }
+  
+  
 }
