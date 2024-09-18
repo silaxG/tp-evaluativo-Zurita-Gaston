@@ -26,7 +26,7 @@ export class RegistroComponent {
     nombre: '',
     apellido: '',
     email: '',
-    role: '',
+    role: 'vis',
     password: ''
   }
 
@@ -54,6 +54,7 @@ export class RegistroComponent {
         text: "¡Se pudo registrar con éxito! :)",
         icon: "success"
       });
+      console.log(this.usuarios)
 
       // el método NAVIGATE nos redirecciona a otra vista
       this.servicioRutas.navigate(['/inicio']);
@@ -78,6 +79,8 @@ export class RegistroComponent {
      * y produce una cadena de caracteres HEXADECIMAL que va a representar a su hash
      * toString: Convierte el resultado en la cadena de caracteres legible
      */
+    
+    //this.usuarios.role='vist'
     this.usuarios.password = CryptoJS.SHA256(this.usuarios.password).toString();
 
     // Llamamos a la función guardUsuario()
@@ -86,17 +89,6 @@ export class RegistroComponent {
     // Llamamos a la función limpiarInputs() para ejecutarla
     this.limpiarInputs();
 
-    /* ########################## LOCAL
-    // Enviamos la nueva información como un NUEVO OBJETO a la colección de usuarios
-    // this.coleccionUsuarios.push(credenciales)
-
-    // Notificamos el éxito al registrarse para el usuario
-    // alert("¡Te registraste con éxito! :)");
-
-    // Mostramos credenciales por consola
-    // console.log(credenciales);
-    // console.log(this.coleccionUsuarios);
-    // ########################### FIN LOCAL*/
   }
 
   /* Función que accede a servicio FIRESTORE y envía la información 
