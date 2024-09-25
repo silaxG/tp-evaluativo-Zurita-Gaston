@@ -19,10 +19,10 @@ import {MatGridListModule} from '@angular/material/grid-list';
   imports: [
     CommonModule,
     InicioRoutingModule,
-    MatGridListModule
+    MatGridListModule,
   ],
   exports:[
-    MatGridListModule
+    MatGridListModule,
   ]
 })
 export class InicioModule { }
