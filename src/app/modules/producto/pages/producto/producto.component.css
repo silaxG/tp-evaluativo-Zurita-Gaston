@@ -1,8 +1,9 @@
 .container{
     text-align: center;
-    
+    justify-content: center;
 }
-
-h1{
-    padding: 1rem;
+/* Estilos para la fila */
+.row {
+    margin: 0; /* Elimina márgenes en la fila */
+    padding: 0;
 }

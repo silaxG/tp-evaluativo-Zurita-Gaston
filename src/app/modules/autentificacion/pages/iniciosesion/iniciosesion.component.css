@@ -3,12 +3,35 @@
     padding: 10px;
     text-align: center;
     justify-content: center;
+    border: 0.1em solid black;
+    background-color: #8A4A4A;
+    border-radius: 25px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
+.row{
+    margin: 25px;
+}
+@media only screen and (min-width: 700px) {
+    .imgfondo{
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    object-fit: cover;
+    border-radius: 65px;
+    }
+    
 
-.boton{
-    width: 120px;
-    margin: auto;
 }
-mat-label{
-    background-color: #FBD4D4;
+@media only screen and (max-width: 600px) {
+    .imgfondo{
+     display: none;
+    }
+  }
+.boton{
+    width: 100%;
+    margin: full;
+}
+mat-form-field {
+    margin: 15px 0; /* Ajusta el margen superior e inferior según sea necesario */
 }

@@ -1,6 +1,9 @@
-footer{
-    display: grid;
-    clear: both;
+
+:host {
+    display: block;
+    width: 100%;
     background-color: #AD6B6B;
     color: white;
-}
+    text-align: center;
+    padding: 1rem;
+  }

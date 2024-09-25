@@ -6,4 +6,13 @@ ul {
   li {
     margin-bottom: 5px;
   }
-  
+  /* texto del tile */
+.tile-text {
+  font-family: 'Serif';
+  color: black;
+  padding: 20px;
+  font-size: 2em; /* Tamaño de fuente mayor */
+  line-height: 1.6; /* Aumenta el espaciado entre líneas */
+  text-align: center; /* Asegura que el texto esté centrado */
+  margin-bottom: 15px; /* Añade un poco de espacio debajo del texto */
+}

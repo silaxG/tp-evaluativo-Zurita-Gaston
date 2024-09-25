@@ -1,13 +1,15 @@
-<mat-grid-list cols="4" rowHeight="100px">
+<mat-grid-list [cols]="4" rowHeight="100px" #grid>
   <mat-grid-tile
     *ngFor="let tile of tiles"
     [colspan]="tile.cols"
     [rowspan]="tile.rows">
-
+    
     <div *ngIf="tile.imageUrl" class="tile-background" [ngStyle]="{'background-image': 'url(' + tile.imageUrl + ')'}"></div>
-
+    
     <div *ngIf="tile.text || tile.class" [ngClass]="tile.class" class="tile-text">
-      {{ tile.text }}
+      <!-- Aquí puedes agregar el enlace dentro del texto -->
+      <a *ngIf="tile.link" [routerLink]="tile.link">{{ tile.text }}</a>
+      <span *ngIf="!tile.link">{{ tile.text }}</span>
     </div>
   </mat-grid-tile>
 </mat-grid-list>

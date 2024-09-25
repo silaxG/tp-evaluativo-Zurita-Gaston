@@ -1,0 +1,19 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+
+router-outlet {
+    flex: 1; /* Esto permite que el contenido principal crezca para ocupar el espacio disponible */
+}
+
+app-footer {
+    padding: 1em;
+    text-align: center;
+    margin-top: auto; /* Asegúrate que el footer se empuje hacia abajo */
+}
+/* Estilos para el navbar */
+app-navbar {
+    margin: 0; /* Elimina márgenes para evitar espacio adicional */
+}

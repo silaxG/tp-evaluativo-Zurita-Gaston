@@ -1,15 +1,12 @@
+<div class="col-md-6">
+    <app-card
+    (productoAgregado)="productoAnadido($event)"
+    [productoReciente]="product"
+    ></app-card>
 <div class="container">
     <div class="row">
-            <div class="col-lg-12">
-                <button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
-            </div>
-        <h1>Catalogo</h1>
 
-        <div class="col-md-6">
-            <app-card
-            (productoAgregado)="productoAnadido($event)"
-            [productoReciente]="product"
-            ></app-card>
+   
         </div>
     </div>
 </div>

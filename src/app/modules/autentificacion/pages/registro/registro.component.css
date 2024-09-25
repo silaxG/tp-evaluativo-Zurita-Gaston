@@ -32,3 +32,6 @@
     width: 100%;
     margin: full;
 }
+mat-form-field {
+    margin: 15px 0; /* Ajusta el margen superior e inferior según sea necesario */
+}
