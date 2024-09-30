@@ -5,12 +5,30 @@
 
         background-attachment: fixed;
     }
+    /* texto del tile */
+.tile-text {
+    font-family: 'Serif';
+    color: black;
+    padding: 20px;
+    font-size: 2em; /* Tamaño de fuente mayor */
+    line-height: 1.6; /* Aumenta el espaciado entre líneas */
+    text-align: center; /* Asegura que el texto esté centrado */
+    margin-bottom: 15px; /* Añade un poco de espacio debajo del texto */
+}
     
 }
 @media only screen and (max-width: 600px) {
     .parallax{
         
         background-attachment: scroll;
+}
+.tile-text {
+    font-family: 'Serif';
+    color: black;
+    padding: 20px;
+    font-size: 1; /* Tamaño de fuente mayor */
+    text-align: center; /* Asegura que el texto esté centrado */
+    margin-bottom: 15px; /* Añade un poco de espacio debajo del texto */
 }
 }
 .parallax {
@@ -52,16 +70,7 @@
     z-index: 1;
 }
 
-/* texto del tile */
-.tile-text {
-    font-family: 'Serif';
-    color: black;
-    padding: 20px;
-    font-size: 2em; /* Tamaño de fuente mayor */
-    line-height: 1.6; /* Aumenta el espaciado entre líneas */
-    text-align: center; /* Asegura que el texto esté centrado */
-    margin-bottom: 15px; /* Añade un poco de espacio debajo del texto */
-}
+
 
 .solido {
     background-color: pink;
@@ -89,10 +98,13 @@
     text-align: center;
     margin: auto;
     white-space: pre-line;
-    color: #D09898; /* Color de texto predeterminado */
-    text-decoration: none; /* Quita el subrayado del enlace */
+
     
 }
-.title:hover {
+.href{
+    color: #D09898; /* Color de texto predeterminado */
+    text-decoration: none; /* Quita el subrayado del enlace */
+}
+.href:hover {
     color: #FBD4D4; /* Color al pasar el cursor */
 }

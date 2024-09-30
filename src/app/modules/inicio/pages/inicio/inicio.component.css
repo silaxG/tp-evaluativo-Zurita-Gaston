@@ -7,6 +7,9 @@ ul {
     margin-bottom: 5px;
   }
   /* texto del tile */
+@media only screen and (min-width: 700px) {
+
+  /* texto del tile */
 .tile-text {
   font-family: 'Serif';
   color: black;
@@ -15,4 +18,42 @@ ul {
   line-height: 1.6; /* Aumenta el espaciado entre líneas */
   text-align: center; /* Asegura que el texto esté centrado */
   margin-bottom: 15px; /* Añade un poco de espacio debajo del texto */
+}
+}
+@media only screen and (max-width: 600px) {
+.tile-text {
+  font-family: 'Serif';
+  color: black;
+  padding: 20px;
+  font-size: 1; /* Tamaño de fuente mayor */
+  text-align: center; /* Asegura que el texto esté centrado */
+  margin-bottom: 15px; /* Añade un poco de espacio debajo del texto */
+}
+}
+.tile-text{
+  background-color: #8A4A4A;
+}
+.title{
+  background-color: #8A4A4A;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+  white-space: pre-line;
+  color: #D09898; /* Color de texto predeterminado */
+  text-decoration: none; /* Quita el subrayado del enlace */
+  
+}
+.title:hover {
+  color: #FBD4D4; /* Color al pasar el cursor */
+}
+app-grids{
+  margin-bottom: 0;
+  padding-bottom: 0;
+  background-color: #8A4A4A;
 }

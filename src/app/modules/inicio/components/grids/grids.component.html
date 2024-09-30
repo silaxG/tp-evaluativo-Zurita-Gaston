@@ -8,7 +8,7 @@
     
     <div *ngIf="tile.text || tile.class" [ngClass]="tile.class" class="tile-text">
       <!-- Aquí puedes agregar el enlace dentro del texto -->
-      <a *ngIf="tile.link" [routerLink]="tile.link">{{ tile.text }}</a>
+      <a *ngIf="tile.link" [routerLink]="tile.link" class="href">{{ tile.text }}</a>
       <span *ngIf="!tile.link">{{ tile.text }}</span>
     </div>
   </mat-grid-tile>
