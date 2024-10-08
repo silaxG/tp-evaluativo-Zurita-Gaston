@@ -3,8 +3,9 @@
     *ngFor="let tile of tiles"
     [colspan]="tile.cols"
     [rowspan]="tile.rows">
-    
+    <a *ngIf="tile.link" [routerLink]="tile.link" class="href">
     <div *ngIf="tile.imageUrl" class="tile-background" [ngStyle]="{'background-image': 'url(' + tile.imageUrl + ')'}"></div>
+    </a>
     
     <div *ngIf="tile.text || tile.class" [ngClass]="tile.class" class="tile-text">
       <!-- Aquí puedes agregar el enlace dentro del texto -->

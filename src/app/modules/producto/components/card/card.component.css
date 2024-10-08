@@ -1,7 +1,65 @@
-.d-block{
+.d-block {
     height: 450px;
 }
-.col-lg-12{
+
+.col-lg-12 {
     justify-content: center;
     display: flex;
+}
+
+.card-container {
+    margin-bottom: 15px;
+}
+
+.col-lg-4 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-bottom: 15px;
+    /* Ajusta el margen derecho según sea necesario */
+    margin-right: 15px;
+    
+}
+
+.card {
+    justify-content: center;
+    text-align: center;
+    /* Ajusta el ancho de la tarjeta según sea necesario */
+    width: 18rem; 
+}
+
+.fondo {
+    background-color: #b36363;
+}
+
+.boton {
+    background-color: #D09898;
+}
+
+.boton:hover {
+    background-color: #a37373;
+}
+
+.fondo2 {
+    background-color: #D09898;
+}
+
+.row {
+    flex-wrap: wrap;
+    /* Ajusta el margen inferior de la fila según sea necesario */
+    margin-bottom: 15px;
+}
+
+.container {
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+/* Estilos para la fila */
+.col-md-6 {
+    justify-content: space-between;
+    flex-wrap: nowrap;
 }
