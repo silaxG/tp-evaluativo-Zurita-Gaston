@@ -1,14 +1,23 @@
+.fondo{
+    width: 100vw;
+    padding-top: 1px; 
+    padding-bottom: 5rem;
+    margin-top:0;
+    background-color: #8a4a4a;
+}
+/* el contenedor que tiene el formulario */
 .container{
     display: flex;
     padding: 10px;
     text-align: center;
     justify-content: center;
     border: 0.1em solid black;
-    background-color: #8A4A4A;
+    background-color: #b36363;
     border-radius: 25px;
     margin-top: 50px;
-    margin-bottom: 50px;
+    padding-top: 50px;
 }
+
 .row{
     margin: 25px;
 }
@@ -16,14 +25,15 @@
     .imgfondo{
     margin: 0;
     padding: 0;
-    width: 100vw;
-    object-fit: cover;
+    width: 50vw;
+    object-fit: fill;
     border-radius: 65px;
     }
     
 
 }
 @media only screen and (max-width: 600px) {
+    /* cuando es resolucion de telefono la imagen de fondo desaparece */
     .imgfondo{
      display: none;
     }
@@ -31,6 +41,11 @@
 .boton{
     width: 100%;
     margin: full;
+    background-color: #D09898;;
+}
+.boton:hover{
+    background-color: #a37373;
+
 }
 mat-form-field {
     margin: 15px 0; /* Ajusta el margen superior e inferior según sea necesario */

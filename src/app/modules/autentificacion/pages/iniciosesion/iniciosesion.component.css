@@ -1,38 +1,62 @@
+.fondo {
+    width: 100vw;
+    padding-top: 1px;
+    padding-bottom: 5rem;
+    margin-top: 0;
+    background-color: #8a4a4a;
+}
 
-.container{
+/* contenedor que abarca todo el formulario */
+.container {
     display: flex;
     padding: 10px;
     text-align: center;
     justify-content: center;
     border: 0.1em solid black;
-    background-color: #8A4A4A;
+    background-color: #b36363;
     border-radius: 25px;
     margin-top: 50px;
-    margin-bottom: 50px;
+    padding-top: 50px;
 }
-.row{
+
+.row {
     margin: 25px;
 }
+
 @media only screen and (min-width: 700px) {
-    .imgfondo{
-    margin: 0;
-    padding: 0;
-    width: 100vw;
-    object-fit: cover;
-    border-radius: 65px;
+    .imgfondo {
+        margin: 0;
+        padding: 0;
+        width: 25vw;
+        object-fit: cover;
+        border-radius: 65px;
     }
-    
+
 
 }
+
 @media only screen and (max-width: 600px) {
-    .imgfondo{
-     display: none;
+
+    /* cuando la pantalla tiene la resolucion de un celular la imagen desaparece */
+    .imgfondo {
+        display: none;
     }
-  }
-.boton{
+}
+
+.boton {
     width: 100%;
     margin: full;
+    background-color: #D09898;
+    ;
+    color: black
 }
+
+.boton:hover {
+    background-color: #a37373;
+
+}
+
 mat-form-field {
-    margin: 15px 0; /* Ajusta el margen superior e inferior según sea necesario */
+    margin: 15px 0;
+    /* Ajusta el margen superior e inferior según sea necesario */
 }
