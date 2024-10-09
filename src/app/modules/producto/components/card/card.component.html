@@ -1,33 +1,36 @@
 <!-- Espacio para mostrar la informacion de Input -->
-<div class="row">
-    <div class="col-lg-12" *ngIf="compraVisible">
-        <div class="col-lg-4">
-            <div class="card text-bg-secondary mb-3">
-                <ul class="list-group">
-                    <h3>Ultima compra:</h3>
-                    <li class="list-group-item">
-                        {{productoReciente}}
-                    </li>
-                </ul>
-            </div>
+<!-- <div class="row"> -->
+<div class="col-lg-12" *ngIf="compraVisible">
+    <div class="col-lg-4">
+        <div class="card text-bg-secondary mb-3">
+            <ul class="list-group">
+                <h3>Ultima compra:</h3>
+                <li class="list-group-item">
+                    {{productoReciente}}
+                </li>
+            </ul>
         </div>
     </div>
-    <!-- Card para mostrar TODOS los productos que el admin ingrese a la base de datos -->
-    <div class="col-lg-4 card-container" *ngFor="let producto of coleccionProductos">
-        <div class="card fondo" style="width: 18rem;">
+</div>
+<!-- Card para mostrar TODOS los productos que el admin ingrese a la base de datos -->
+<div class="container">
+    <div class="col" *ngFor="let producto of coleccionProductos">
+
+        <div class="card fondo">
             <img src="{{producto.imagen}}" class="card-img-top" alt="{{producto.alt}}">
 
             <div class="card-body">
                 <h5 class="card-title">{{producto.nombre}}</h5>
                 <p class="card-text">precio</p>
                 <p class="card-title">${{producto.precio}}</p>
-                
+
                 <button type="button" class="btn boton btn-block" data-bs-toggle="modal" data-bs-target="#verMas"
                     (click)="mostrarVer(producto)">Ver más</button>
             </div>
         </div>
     </div>
 </div>
+<!-- </div> -->
 
 
 
