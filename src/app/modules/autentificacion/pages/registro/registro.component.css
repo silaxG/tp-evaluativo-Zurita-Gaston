@@ -32,12 +32,17 @@
     
 
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
     /* cuando es resolucion de telefono la imagen de fondo desaparece */
     .imgfondo{
      display: none;
     }
-  }
+}
+.container{
+    border-radius: 0;
+    
+}
+  
 .boton{
     width: 100%;
     margin: full;

@@ -18,13 +18,14 @@
 } 
 /* espacio entre las tarjetas */
 
- .col{
+.col{
     flex-direction: column;
     display: flex;
     justify-content: center;    
     margin: auto;
     padding: 10px;
-
+    
+    align-items: center;
  }
 
 
@@ -83,4 +84,8 @@
 
 .card-body {
     flex-grow: 1; /* Hace que el contenido crezca para ocupar el espacio disponible */
+}
+/* modal */
+.modal-content{
+    align-items: center;
 }

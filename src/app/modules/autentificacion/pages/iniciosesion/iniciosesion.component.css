@@ -35,11 +35,15 @@
 
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
 
     /* cuando la pantalla tiene la resolucion de un celular la imagen desaparece */
     .imgfondo {
         display: none;
+    }
+    .container{
+        border-radius: 0;
+        
     }
 }
 
