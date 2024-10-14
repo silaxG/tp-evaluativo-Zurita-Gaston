@@ -35,19 +35,19 @@
     /* Ajusta el ancho de la tarjeta según sea necesario */
     width: 18rem; 
 }
-
+/* color de fondo de las tarjets */
 .fondo {
     background-color: #b36363;
 }
-
+/* color del boton estandar */
 .boton {
     background-color: #D09898;
 }
-
+/* color del boton al colocar el cursor encima */
 .boton:hover {
     background-color: #a37373;
 }
-
+/* color del modal */
 .fondo2 {
     background-color: #D09898;
 }
@@ -85,7 +85,17 @@
 .card-body {
     flex-grow: 1; /* Hace que el contenido crezca para ocupar el espacio disponible */
 }
-/* modal */
-.modal-content{
-    align-items: center;
-}
+@media only screen and (max-width: 600px) {
+    /* modal */
+    .modal-content{
+        align-items: center;
+    }
+    }
+    @media only screen and (min-width: 601px) {
+        .modal-body{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+    }   

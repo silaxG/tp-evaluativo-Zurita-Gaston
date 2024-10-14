@@ -5,8 +5,10 @@
 .menu-items {
   display: flex;
 }
-
+/* resolucion de telefono */
 @media only screen and (max-width: 600px) {
+  /* los botones del navbar se desaparecen y son reemplazados
+  por un boton que abre una lista */
   #menuinicio,
   #menuproductos,
   #botonregistrarse,
@@ -15,25 +17,40 @@
   #botoncerrarsesion {
     display: none;
   }
-
+  /* en resolucion de telefono el logo se quedara en el centro */
+  #logo{
+    width: 75px;
+    height: 50px;
+    position: fixed;
+    left: 40%;
+  }
+  /* el navbar en telefono se quedara pegado a la parte superior */
+  :host{
+    position: fixed;
+  }
 }
-
-@media only screen and (min-width: 700px) {
+/* resolucion de tablet-ordenador */
+@media only screen and (min-width: 601px) {
+  /* el menu no aparecera por lo cual los botones se mostraran con normalidad */
   #menuhamburguesa1 {
     display: none;
   }
-  
+  /* el logo se quedara en la esquina superior izquierda */
+  #logo{
+    width: 75px;
+    height: 50px;
+  }
 }
+/* comportamiento del navbar */
 :host {
   display: block;
   width: 100%;
-  /* position: fixed; */
   top: 0;
   left: 0;
   z-index: 1000; /* Asegúrate de que el z-index sea lo suficientemente alto */
 }
 
-
+/* color del navbar rosa y color de texto blanco */
 mat-toolbar {
   background-color: #AD6B6B;
   color: white;
