@@ -11,7 +11,7 @@ export class GridsComponent {
   tiles = [
     { text: 'Amigurumis recien fabricados\n para su venta', cols: 4, rows: 1, imageUrl: '', class: 'solido' },
     { text: '', cols: 4, rows: 4, imageUrl: '', class: 'parallax' },
-    { text: 'Revise nuestro catalogo', cols: 4, rows: 2, imageUrl: '', class: 'title', link:'/producto' },
+    { text: 'Explore ahora nuestro catalogo', cols: 4, rows: 2, imageUrl: '', class: 'title', link:'/producto' },
     { text: '', cols: 4, rows: 4, imageUrl: '/assets/carousel1.jpeg', class: 'meow' , link:'/producto' },
     { text: '', cols: 1, rows: 2, imageUrl: '/assets/carousel2.jpeg', class: 'meow' , link:'/producto' },
     { text: '', cols: 1, rows: 2, imageUrl: '/assets/carousel4.jpeg', class: 'meow', link:'/producto' },

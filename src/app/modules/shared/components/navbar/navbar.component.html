@@ -6,9 +6,6 @@
   <mat-menu #menuhamburguesa="matMenu">
     <button mat-menu-item routerLink="/inicio">Inicio</button>
     <button mat-menu-item routerLink="/producto">Catálogo</button>
-    <button mat-menu-item *ngIf="!isLoggedIn" routerLink="/login">Iniciar Sesión</button>
-    <button mat-menu-item *ngIf="!isLoggedIn" routerLink="/registro">Registrarse</button>
-    <button mat-menu-item *ngIf="isLoggedIn" (click)="cerrarSesion()">Cerrar Sesión</button>
   </mat-menu>
 <img src="/assets/logo.png" alt="logo" id="logo">
   <button mat-button id="menuinicio" routerLink="/inicio">Inicio</button>
@@ -19,4 +16,14 @@
   <button mat-flat-button id="botoniniciarsesion" routerLink="/login" *ngIf="!isLoggedIn">Iniciar Sesión</button>
   <!-- Botón de "Cerrar Sesión" visible solo cuando el usuario está logueado -->
   <button mat-flat-button id="botoncerrarsesion" *ngIf="isLoggedIn" (click)="cerrarSesion()">Cerrar Sesión</button>
+  <!-- menu hamburguesa solo disponible para telefonos para registrarse e iniciar sesion -->
+  <button id="menulogin" mat-icon-button [matMenuTriggerFor]="menulogin">
+    <mat-icon>person</mat-icon>
+  </button>
+  <mat-menu #menulogin="matMenu">
+    <button mat-menu-item *ngIf="!isLoggedIn" routerLink="/login">Iniciar Sesión</button>
+    <button mat-menu-item *ngIf="!isLoggedIn" routerLink="/registro">Registrarse</button>
+    <button mat-menu-item *ngIf="isLoggedIn" (click)="cerrarSesion()">Cerrar Sesión</button>
+  </mat-menu>
+  
 </mat-toolbar>

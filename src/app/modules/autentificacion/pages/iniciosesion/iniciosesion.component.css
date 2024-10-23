@@ -20,10 +20,10 @@
 }
 
 .row {
-    margin: 25px;
+    margin: 0;
 }
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 701px) {
     .imgfondo {
         margin: 0;
         padding: 0;
@@ -32,7 +32,11 @@
         border-radius: 65px;
     }
 
+    /* cuando es resolucion de computadora el formulario se mantiene un margin de 25px para mantener distancia con la imagenz*/
+.row{
 
+    margin: 25px;
+}
 }
 
 @media only screen and (max-width: 700px) {
@@ -45,6 +49,11 @@
         border-radius: 0;
         
     }
+    /* cuando es resolucion de telefono el formulario se centra eliminando el margin */
+    .row{
+
+            margin: 0px;
+        }
 }
 
 .boton {

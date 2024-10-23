@@ -90,6 +90,19 @@
     .modal-content{
         align-items: center;
     }
+    /* la tarjeta de compra reciente */
+    #comprarecientemovil{
+        margin-top: 4.5rem;
+    }
+    /* tarjeta para comprar en movil */
+    #compramovil{
+        margin-top: 3rem;
+    }
+    .mb-3{
+        display: flex;
+        justify-content: center;
+    }
+
     }
     @media only screen and (min-width: 601px) {
         .modal-body{

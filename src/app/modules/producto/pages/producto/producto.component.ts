@@ -28,7 +28,7 @@ export class ProductoComponent {
 
       Swal.fire({
         title: '¡Genial!',
-        text: 'Ha comprado magicamente el articulo con exito',
+        text: 'Ha comprado mágicamente el articulo con éxito',
         icon: 'success'
       })
     }

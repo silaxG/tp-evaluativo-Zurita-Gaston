@@ -32,7 +32,7 @@
 /* resolucion de tablet-ordenador */
 @media only screen and (min-width: 601px) {
   /* el menu no aparecera por lo cual los botones se mostraran con normalidad */
-  #menuhamburguesa1 {
+  #menuhamburguesa1, #menulogin {
     display: none;
   }
   /* el logo se quedara en la esquina superior izquierda */
